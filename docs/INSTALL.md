@@ -8,11 +8,11 @@ git clone https://github.com/dqj5182/WHAM-PRIMARY.git --recursive
 cd WHAM-PRIMARY/
 
 # Create Conda environment
-conda create -n wham python=3.9
+conda create -n wham python=3.9 -y
 conda activate wham
 
 # Install PyTorch libraries
-conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 
 # Install PyTorch3D (optional) for visualization
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
@@ -31,8 +31,8 @@ unzip eigen-3.4.0.zip -d thirdparty && rm -rf eigen-3.4.0.zip
 conda install pytorch-scatter=2.0.9 -c rusty1s
 conda install cudatoolkit-dev=11.3.1 -c conda-forge
 
-# ONLY IF your GCC version is larger than 10
+# ONLY IF your GCC version is larger than 10 (check with "gcc --version")
 conda install -c conda-forge gxx=9.5
 
-pip install .
+pip install . --no-build-isolation
 ```
