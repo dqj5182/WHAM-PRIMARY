@@ -4,8 +4,8 @@ WHAM has been implemented and tested on Ubuntu 20.04 and 22.04 with python = 3.9
 
 ```bash
 # Clone the repo
-git clone https://github.com/yohanshin/WHAM.git --recursive
-cd WHAM/
+git clone https://github.com/dqj5182/WHAM-PRIMARY.git --recursive
+cd WHAM-PRIMARY/
 
 # Create Conda environment
 conda create -n wham python=3.9
